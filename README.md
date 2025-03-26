@@ -45,7 +45,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Start Jenkins job
-        uses: geokats7/jenkins_client@main
+        uses: Randomliner/jenkins_client_geokats7@v1.3.5
         with:
           jenkins_job_name: 'Job_folder/my_job'
           jenkins_job_parameters: '{"APP_ENV_NAME": "staging"}'
