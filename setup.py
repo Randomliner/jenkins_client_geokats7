@@ -6,9 +6,9 @@ with open("README.md", "r") as readme_file:
 setup(
     name="jenkins_client",
     packages=find_packages(),
-    version="0.1.0",
+    version="1.3.5",
     description="A client for Jenkins",
-    author="Yorgos Katsaros",
+    author="Yorgos Katsaros, Geokats7, Randomliner",
     license="MIT",
     long_description=readme,
     url="https://github.com/Orfium/jenkins_client",

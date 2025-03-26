@@ -1,4 +1,14 @@
-## v0.2.0 (2024-03-11)
+## v1.3.5 (2025-03-26)
+
+### Fix
+
+- setup.py file
+- readme file
+- action.yml
+- **client.py**: job_poll_interval string error fix
+- **client.py**: job_poll_interval streamline to use self
+
+## v0.2.0 (v1.3.4) (2024-03-11)
 
 ### Feat
 

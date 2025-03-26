@@ -14,8 +14,9 @@ get status of last builds and more.
 from jenkins_client import JenkinsClient
 
 jc = JenkinsClient(jenkins_base_url='https://my-jenkins-instance.com',
-                   username='auto',
-                   password='*****')
+                   jenkins_user='auto',
+                   jenkins_password='*****',
+                   job_poll_interval=30)
 
 jc.start_job(job_name='job_name', params={'param_key':'param_value'}) # params must be a python dictionary
 ```
@@ -32,9 +33,10 @@ The action parameters are the following:
 | `jenkins_user`                     | Yes | The username for the jenkins server                                          |
 | `jenkins_password`                 | Yes | The password/token for the jenkins server                                    |
 | `wait_for_result` | No | If set to true, the action will wait for the job to finish _(default: True)_ |
+| `job_poll_interval` | No | Number of seconds between polling. Integer values only _(default: 30)_ |
 
 **Note**
-`jenkins_job_parameters` and `wait_for_result` should be quoted as in the example below.
+`jenkins_job_parameters`, `job_poll_interval`, and `wait_for_result` should be quoted as in the example below.
 
 #### Example of usage:
 ```yaml
@@ -51,6 +53,7 @@ jobs:
           jenkins_user: ${{ secrets.JENKINS_USER }}
           jenkins_password: ${{ secrets.JENKINS_PASSWORD }}
           wait_for_result: 'False'
+          job_poll_interval: '60'
 ```
 
-###### Contact QA team in order to add more actions to the package.
+###### This is a fork of the jenkins client by geokats7

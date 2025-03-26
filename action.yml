@@ -23,7 +23,7 @@
         description: 'Wait for result'
         required: false
         default: 'True'
-      polling_interval:
+      job_poll_interval:
         description: 'Interval to poll for result'
         required: false
 
@@ -34,7 +34,7 @@
           - ${{ inputs.jenkins_job_name }}
           - ${{ inputs.jenkins_job_parameters }}
           - ${{ inputs.wait_for_result }}
-          - ${{ inputs.polling_interval }}
+          - --job_poll_interval=${{ inputs.job_poll_interval }}
           - --jenkins_base_url=${{ inputs.jenkins_base_url }}
           - --jenkins_user=${{ inputs.jenkins_user }}
           - --jenkins_password=${{ inputs.jenkins_password }}
