@@ -1,8 +1,8 @@
-  name: 'Trigger Jenkins job with parameters'
+  name: 'Trigger Jenkins job with parameters (polling_fixed)'
   description: 'Trigger a Jenkins job with parameters and optionally wait for its result.'
   branding:
       icon: "check"
-      color: orange
+      color: green
   inputs:
       jenkins_job_name:
         description: 'Jenkins job name'

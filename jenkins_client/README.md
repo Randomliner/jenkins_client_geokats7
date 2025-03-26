@@ -13,10 +13,11 @@ get status of last builds and more.
 ~~~python
 from jenkins_client import JenkinsClient
 
-jc = JenkinsClient(jenkins_base_url="https://my-jenkins-instance.com",
-                   username="auto",
-                   password=*****)
+jc = JenkinsClient(jenkins_base_url='https://my-jenkins-instance.com',
+                   jenkins_user='auto',
+                   jenkins_password='*****',
+                   job_poll_interval=30)
 
-jc.start_job(job_name, params, wait_for_result, job_poll_interval) # params must be a python dictionary
+jc.start_job(job_name='job_name', params={'param_key':'param_value'}, wait_for_result) # params must be a python dictionary
 ~~~
 _`job_name` parameter is required, the rest are optional._

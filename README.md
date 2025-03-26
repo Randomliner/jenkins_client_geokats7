@@ -18,7 +18,7 @@ jc = JenkinsClient(jenkins_base_url='https://my-jenkins-instance.com',
                    jenkins_password='*****',
                    job_poll_interval=30)
 
-jc.start_job(job_name='job_name', params={'param_key':'param_value'}) # params must be a python dictionary
+jc.start_job(job_name='job_name', params={'param_key':'param_value'}, wait_for_result) # params must be a python dictionary
 ```
 
 ### GitHub Action usage
